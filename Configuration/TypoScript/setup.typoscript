@@ -1,7 +1,3 @@
-##############
-#### PAGE ####
-##############
-
 page = PAGE
 page {
     # Append Page scroll indicator html to body if activated.

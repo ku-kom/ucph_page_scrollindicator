@@ -1,12 +1,4 @@
 ucph_page_scrollindicator {
-    fluidtemplate {
-        # cat=UCPH page scroll indicator: templates/700/100; type=string; label=Layout Root Path: Path to layouts
-        layoutRootPath = EXT:ucph_base_config/Resources/Private/Layouts/Page/
-        # cat=UCPH page scroll indicator: templates/700/110; type=string; label=Partial Root Path: Path to partials
-        partialRootPath = EXT:ucph_base_config/Resources/Private/Partials/Page/
-        # cat=UCPH page scroll indicator: templates/700/120; type=string; label=Template Root Path: Path to templates
-        templateRootPath = EXT:ucph_base_config/Resources/Private/Templates/Page/
-    }
     assets {
         # cat=UCPH page scroll indicator/Assets/t0; type=string; label=CSS assets: Path to stylesheet.
         Css = EXT:ucph_page_scrollindicator/Resources/Public/Css/Dist/ucph-page-scrollindicator.min.css
