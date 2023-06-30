@@ -5,10 +5,10 @@ call_user_func(function ($extKey='ucph_page_scrollindicator') {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
         $extKey,
         'Configuration/TsConfig/Page/All.tsconfig',
-        'KU Scroll indicator'
+        'UCPH Page scroll indicator'
     );
 
-    // Add faculty fields to pages table to show TCA fields definitions
+    // Add Checkbox to page settings
     $GLOBALS['TCA']['pages']['columns'] = array_replace_recursive(
         $GLOBALS['TCA']['pages']['columns'],
         [
