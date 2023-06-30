@@ -1,6 +1,6 @@
 {
 	"name": "ucph_page_scrollindicator",
-	"version": "1.0.6",
+	"version": "1.0.0",
 	"description": "Sitepackage for the project \"KU Scrpll indicator\" ",
 	"main": "Resources/Public/JavaScript/Dist/ucph-page-scrollindicator.min.js",
 	"scripts": {
