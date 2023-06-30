@@ -1,8 +1,5 @@
 <?php
 
-/**
- * Extension Manager/Repository config file for ext "ucph_page_scrollindicator".
- */
 $EM_CONF[$_EXTKEY] = [
     'title' => 'UCPH TYPO3 page scroll indicator',
     'description' => 'Adds scroll progress bar at the top of the page.',
