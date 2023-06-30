@@ -1,0 +1,8 @@
+ucph_page_scrollindicator {
+    assets {
+        # cat=UCPH page scroll indicator/Assets/t0; type=string; label=CSS assets: Path to stylesheet.
+        Css = EXT:ucph_page_scrollindicator/Resources/Public/Css/Dist/ucph-page-scrollindicator.min.css
+        # cat=UCPH page scroll indicator/Assets/t1; type=string; label=JavaScript assets: Path to javaScript file.
+        Js = EXT:ucph_page_scrollindicator/Resources/Public/JavaScript/Dist/ucph-page-scrollindicator.min.js
+    }
+}

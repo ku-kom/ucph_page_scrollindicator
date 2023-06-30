@@ -1,0 +1,30 @@
+:root {
+    --bs-progress-height: 10px;
+}
+
+#horizontal-scroll {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    margin: 0;
+    background-color: var(--bs-gray-200, gray);
+    border-radius: 0;
+    opacity: 0;
+    transition: height .3s;
+}
+
+#horizontal-scroll.in-view {
+    opacity: 1;
+    height: var(--bs-progress-height);
+    z-index: 1024;
+}
+
+.in-view~.body-bg, .in-view~.body-bg>header {
+    margin-top: var(--bs-progress-height);
+}
+
+#horizontal-scroll .progress-bar {
+    background-color: var(--red1, red);
+    width: var(--scrollPercentage)
+}
