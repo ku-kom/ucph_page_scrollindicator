@@ -1,8 +1,8 @@
-Sitepackage for the project "KU Scroll indicator"
+TYPO3 extension "UCPH page Scroll indicator"
 ==============================================================
 
 Adds scroll progress bar at the top of the page.
-TYPO3 v. 11.5
+TYPO3 v. 11.5, PHP 8.1.
 
 ## Development build
 Build javascript and scss files from their `Src/` folders.

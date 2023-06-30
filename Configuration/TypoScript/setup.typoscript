@@ -4,18 +4,21 @@
 
 page = PAGE
 page {
-    # Append html to body id TCA on page is activated
-    bodyTagCObject >
-    bodyTagCObject = TEXT
+    # Append Page scroll indicator html to body if activated.
     bodyTagCObject {
-        if.equals = 1
         if.value.field = tx_ucph_activate_page_scroll_indicator
-        outerWrap (
-            |<div id="horizontal-scroll" class="progress" role="progressbar" aria-label="Scroll progress 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" tabindex="-1"><div class="progress-bar"></div></div>
-        )
+        if.equals = 1
+        stdWrap {
+            append = TEXT
+            append {
+                value (
+                    <div id="horizontal-scroll" class="progress" role="progressbar" aria-label="Scroll progress 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" tabindex="-1"><div class="progress-bar"></div></div>
+                )
+            }
+        }
     }
 
-    # Include css and js if TCA field on page is activated
+    # Include css and js if TCA field on page is activated.
     includeCSS {
         if.isTrue = {$ucph_page_scrollindicator.assets.Css}
         ucph_page_scrollindicator = {$ucph_page_scrollindicator.assets.Css}
@@ -30,5 +33,17 @@ page {
         ucph_page_scrollindicator.if.value.field = tx_ucph_activate_page_scroll_indicator
         ucph_page_scrollindicator.if.equals = 1
         htmlSanitize = 1
+    }
+}
+
+# Add class to body tag if Page scroll indicatior is activated only.
+# lib.page.class is inherited from EXT:ucph_base_config.
+lib.page.class = COA
+lib.page.class {
+    60 = TEXT
+    60 {
+        if.value.field = tx_ucph_activate_page_scroll_indicator
+        if.equals = 1
+        noTrimWrap = | scroll-indicator||
     }
 }

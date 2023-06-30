@@ -1,5 +1,5 @@
 :root {
-    --bs-progress-height: 10px;
+    --ucph-scrollindicator-height: 10px;
 }
 
 #horizontal-scroll {
@@ -14,17 +14,19 @@
     transition: height .3s;
 }
 
+#horizontal-scroll .progress-bar {
+    background-color: var(--red1, var(--bs-red));
+    width: var(--scrollPercentage)
+}
+
 #horizontal-scroll.in-view {
     opacity: 1;
-    height: var(--bs-progress-height);
+    height: var(--ucph-scrollindicator-height);
     z-index: 1024;
 }
-
-.in-view~.body-bg, .in-view~.body-bg>header {
-    margin-top: var(--bs-progress-height);
-}
-
-#horizontal-scroll .progress-bar {
-    background-color: var(--red1, red);
-    width: var(--scrollPercentage)
+.scroll-indicator {
+    height: unset;
+} 
+.scroll-indicator .in-view #page-header {
+    margin-top: var(--ucph-scrollindicator-height);
 }
