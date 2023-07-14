@@ -13,6 +13,7 @@ call_user_func(function ($extKey='ucph_page_scrollindicator') {
         $GLOBALS['TCA']['pages']['columns'],
         [
             'tx_ucph_activate_page_scroll_indicator' => [
+                'exclude' => true,
                 'label' => 'LLL:EXT:'.$extKey.'/Resources/Private/Language/locallang_be.xlf:activate-scroll-indicator',
                 'config' => [
                     'type' => 'check',
