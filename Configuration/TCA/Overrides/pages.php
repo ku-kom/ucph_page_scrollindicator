@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * Activate a scroll indicator for a page
+ */
+
 defined('TYPO3') or die('Access denied.');
 
 call_user_func(function ($extKey='ucph_page_scrollindicator') {

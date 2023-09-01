@@ -14,15 +14,7 @@ page {
         }
     }
 
-    # Include css and js if TCA field on page is activated.
-    includeCSS {
-        if.isTrue = {$ucph_page_scrollindicator.assets.Css}
-        ucph_page_scrollindicator = {$ucph_page_scrollindicator.assets.Css}
-        ucph_page_scrollindicator.if.value.field = tx_ucph_activate_page_scroll_indicator
-        ucph_page_scrollindicator.if.equals = 1
-        htmlSanitize = 1
-    }
-
+    # Include js if TCA field on page is activated.
     includeJSFooter {
         if.isTrue = {$ucph_page_scrollindicator.assets.Js}
         ucph_page_scrollindicator = {$ucph_page_scrollindicator.assets.Js}

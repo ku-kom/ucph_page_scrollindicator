@@ -1,0 +1,36 @@
+:root {
+    --ucph-scrollindicator-height: .5rem;
+}
+
+#horizontal-scroll {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 0;
+    margin: 0;
+    background-color: var(--bs-gray-200);
+    border-radius: 0;
+    opacity: 0;
+    transition: height .3s;
+
+    .progress-bar {
+        background-color: var(--bs-red);
+        width: var(--scrollPercentage)
+    }
+
+    &.in-view {
+        opacity: 1;
+        height: var(--ucph-scrollindicator-height);
+        z-index: 1024;
+    }
+}
+
+.scroll-indicator {
+    height: unset;
+
+    .in-view {
+        #page-header {
+            margin-top: var(--ucph-scrollindicator-height);
+        }
+    }
+}
