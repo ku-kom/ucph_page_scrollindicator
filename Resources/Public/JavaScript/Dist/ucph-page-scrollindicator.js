@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
                  */
                 if (this.progress) {
                     this.scrollProgress();
-                    const top = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-                    this.progress.classList.toggle('in-view', top > 60);
+                    let scollPosition = window.pageYOffset || document.documentElement.scrollTop;
+                    this.progress.classList.toggle('in-view', scollPosition > 100);
                 }
             }
 
