@@ -1,5 +1,11 @@
-:root {
+.scroll-indicator {
     --ucph-scrollindicator-height: .5rem;
+
+    .in-view {
+        #page-header {
+            margin-top: var(--ucph-scrollindicator-height);
+        }
+    }
 }
 
 #horizontal-scroll {
@@ -22,15 +28,5 @@
         opacity: 1;
         height: var(--ucph-scrollindicator-height);
         z-index: 1024;
-    }
-}
-
-.scroll-indicator {
-    height: unset;
-
-    .in-view {
-        #page-header {
-            margin-top: var(--ucph-scrollindicator-height);
-        }
     }
 }
