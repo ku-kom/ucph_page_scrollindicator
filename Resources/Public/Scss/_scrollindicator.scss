@@ -17,7 +17,7 @@
     background-color: var(--bs-gray-200);
     border-radius: 0;
     opacity: 0;
-    transition: height .3s;
+    // transition: height .3s;
 
     .progress-bar {
         background-color: var(--bs-red);
@@ -27,6 +27,6 @@
     &.in-view {
         opacity: 1;
         height: var(--ucph-scrollindicator-height);
-        z-index: 1024;
+        // z-index: 1024;
     }
 }
