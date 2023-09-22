@@ -1,14 +1,4 @@
-.scroll-indicator {
-    --ucph-scrollindicator-height: .5rem;
-
-    .in-view {
-        #page-header {
-            margin-top: var(--ucph-scrollindicator-height);
-        }
-    }
-}
-
-#horizontal-scroll {
+#scrollindicator {
     position: sticky;
     top: 0;
     width: 100%;
@@ -26,7 +16,7 @@
 
     &.in-view {
         opacity: 1;
-        height: var(--ucph-scrollindicator-height);
+        height: var(--ucph-scrollindicator-height, .5rem);
         // z-index: 1024;
     }
 }

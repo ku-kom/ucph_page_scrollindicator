@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
             constructor(progress) {
                 this.progress = progress;
                 this.progressbar = this.progress.querySelector('.progress-bar');
+                const root = document.querySelector(':root');
+                root.style.setProperty('--ucph-scrollindicator-height', '.5rem');
                 this.updateProgress();
                 this.addEventListeners();
             }
