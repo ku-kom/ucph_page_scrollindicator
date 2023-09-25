@@ -17,6 +17,6 @@
     &.in-view {
         opacity: 1;
         height: var(--ucph-scrollindicator-height, .5rem);
-        // z-index: 1024;
+        z-index: 1024;
     }
 }
