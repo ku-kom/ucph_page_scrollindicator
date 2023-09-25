@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (this.progress) {
                     this.scrollProgress();
                     let scollPosition = window.pageYOffset || document.documentElement.scrollTop;
-                    this.progress.classList.toggle('in-view', scollPosition > 100);
+                    this.progress.classList.toggle('in-view', scollPosition > 60);
                 }
             }
 
@@ -62,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     capture: false,
                     passive: true
                 });
-
 
                 window.addEventListener('resize', debounce(() => {
                     this.updateProgress();
@@ -82,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const progressEl = new Progress(progress);
             });
         }
-
     }
     runScrollIndicator();
 
@@ -93,5 +91,4 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('orientationchange', debounce(function () {
         runScrollIndicator();
     }, 150));
-
 });
