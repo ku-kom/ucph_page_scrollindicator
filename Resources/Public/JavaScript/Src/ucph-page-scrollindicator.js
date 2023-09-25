@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         /**
          * Check if global debounce() and reducedMotion() exits
          */
-        if (typeof debounce !== 'function' && typeof reduceMotion !== 'function') {
+        if (typeof debounce !== 'function' && typeof reduceMotion !== 'function' && reduceMotion() === true) {
             return;
         }
 
